@@ -4,18 +4,47 @@ import RestaurantCard from '../components/RestaurantCard';
 import GlobalStyle from '../utils/GlobalStyle';
 import Menu from '../components/Menu';
 
-const ExploreScreen = () => {
+const ExploreScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View>
         <Text style={GlobalStyle.screenTitle}>Restaurants</Text>
         <Text style={styles.sectionTitle}>Restaurant Near You</Text>
-        <RestaurantCard name="sushi" />
-        <RestaurantCard name="burger" />
-        <RestaurantCard name="fine dining" />
+        <RestaurantCard
+          name="sushi"
+          onPress={() => {
+            // navigation.push('RestaurantScreen', {name: 'sushi'});
+            navigation.navigate('RestaurantsScreenStack', {
+              screen: 'Restaurant',
+              params: {name: 'Hello from Explore'},
+            });
+          }}
+        />
+        <RestaurantCard
+          name="burger"
+          onPress={() => {
+            navigation.push('RestaurantScreen', {name: 'burger'});
+          }}
+        />
+        <RestaurantCard
+          name="fine dining"
+          onPress={() => {
+            navigation.push('RestaurantScreen', {name: 'fine dining'});
+          }}
+        />
         <Text style={styles.sectionTitle}>Most Popular Restaurants</Text>
-        <RestaurantCard name="sushi" />
-        <RestaurantCard name="burger" />
+        <RestaurantCard
+          name="sushi2"
+          onPress={() => {
+            navigation.push('RestaurantScreen', {name: 'sushi2'});
+          }}
+        />
+        <RestaurantCard
+          name="burger2"
+          onPress={() => {
+            navigation.push('RestaurantScreen', {name: 'burger2'});
+          }}
+        />
         <Menu />
       </View>
     </View>
