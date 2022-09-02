@@ -54,6 +54,7 @@ const ExploreScreen = ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     padding: 16,
+    marginTop: 24,
   },
   restaurantCard: {
     backgroundColor: '#efefef',

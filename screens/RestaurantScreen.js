@@ -2,10 +2,12 @@ import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
 import GlobalStyle from '../utils/GlobalStyle';
 import RestaurantCard from '../components/RestaurantCard';
+import TopBackNavigation from '../components/TopBackNavigation';
 
 const RestaurantScreen = ({route, navigation}) => {
   return (
     <View style={styles.container}>
+      <TopBackNavigation />
       <Text style={GlobalStyle.screenTitle}>{route.params.name}</Text>
 
       <Text>Related Restaurants</Text>
