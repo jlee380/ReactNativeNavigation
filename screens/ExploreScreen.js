@@ -2,12 +2,13 @@ import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
 import RestaurantCard from '../components/RestaurantCard';
 import GlobalStyle from '../utils/GlobalStyle';
-import Menu from '../components/Menu';
+import TopDrawerMenuNavigation from '../components/TopDrawerMenuNavigation';
 
 const ExploreScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View>
+        <TopDrawerMenuNavigation />
         <Text style={GlobalStyle.screenTitle}>Restaurants</Text>
         <Text style={styles.sectionTitle}>Restaurant Near You</Text>
         <RestaurantCard
@@ -45,7 +46,6 @@ const ExploreScreen = ({navigation}) => {
             navigation.push('RestaurantScreen', {name: 'burger2'});
           }}
         />
-        <Menu />
       </View>
     </View>
   );

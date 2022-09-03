@@ -2,7 +2,7 @@ import {View, Text, ScrollView, StyleSheet} from 'react-native';
 import RestaurantCard from '../components/RestaurantCard';
 import React from 'react';
 import GlobalStyle from '../utils/GlobalStyle';
-import Menu from '../components/Menu';
+import TopDrawerMenuNavigation from '../components/TopDrawerMenuNavigation';
 
 const RestaurantsScreen = ({navigation}) => {
   // const restaurantsInfo = [
@@ -14,6 +14,7 @@ const RestaurantsScreen = ({navigation}) => {
   // ]
   return (
     <View style={styles.container}>
+      <TopDrawerMenuNavigation />
       <Text style={GlobalStyle.screenTitle}>Restaurants Screen</Text>
       <ScrollView>
         {/* {restaurantsInfo.map((res) => {
@@ -41,7 +42,6 @@ const RestaurantsScreen = ({navigation}) => {
           onPress={name => navigation.navigate('RestaurantScreen', {name})}
         />
       </ScrollView>
-      <Menu />
     </View>
   );
 };

@@ -4,6 +4,7 @@ import ExploreScreen from './screens/ExploreScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import RestaurantsScreen from './screens/RestaurantsScreen';
 import RestaurantScreen from './screens/RestaurantScreen';
+// import 'react-native-gesture-handler';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
